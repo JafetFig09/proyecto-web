@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$colors :(
+    'blaze-orange':#ff6600,
+    'crusta':#FF8533,
+    'white':#FFFFFF,
+    'black':#000000,
+);
+
+//colors 
+
+$primary:$color('blaze-orange');
+
+//fonts
+
+$font-family-base:"Poppins", sans-serif;
+
+/* Header */
+
+/* body */
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
