@@ -1,23 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 $colors :(
-    'blaze-orange':#ff6600,
-    'crusta':#FF8533,
-    'white':#FFFFFF,
-    'black':#000000,
+    blaze-orange:#ff6600,
+    crusta:#FF8533,
 );
 
-//colors 
+//convert px to rem
+@function rem($value) {
+    $remValue: ($value / 16)+rem;
+    @return $remValue;
+}
 
-$primary:$color('blaze-orange');
+//elemments
+.button-capsule-white {
+    background-color: #fff;
+    color: map-get($colors, crusta);
+    border: 1px solid #000;
+    border-radius: rem(20);
 
-//fonts
+    &:hover {
+        color: #fff;
+        background-color: map-get($colors, crusta);
+        border: 1px solid #fff;
+    }
+}
 
-$font-family-base:"Poppins", sans-serif;
+
+.custom-shadow{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+
+
+
 
 /* Header */
+.header {
+    .header-logo {
+        width: rem(60);
+    }
+
+    .navbar {
+        .navbar-brand {
+            font-size: rem(14);
+        }
+    }
+}
 
 /* body */
 
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+/*Escritorio*/
+@media (min-width: 992px){
+
+    /* Header */
+    .header {
+        .header-logo {
+            width: rem(100);
+        }
+
+        .navbar {
+            .navbar-brand {
+                font-size: rem(20);
+            }
+        }
+    }
+}

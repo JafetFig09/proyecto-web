@@ -1,9 +1,5 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.0"
-  },
-  "scripts": {
-    "build": "purgecss --css sass/main.css  --content proyecto"
-    
   }
 }
