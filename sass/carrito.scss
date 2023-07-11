@@ -1,0 +1,19 @@
+@import "main.scss";
+
+
+.img-size{
+    width: 100%;
+    height: rem(200);
+    object-fit: cover;
+
+}
+
+.buscador{
+    border-radius: rem(8);
+    border: 2px solid #ff6600;
+}
+
+.titulo-carrito{
+    font-size: rem(3);
+}
+
