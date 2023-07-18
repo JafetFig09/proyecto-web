@@ -1,35 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar producto</title>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Agregar producto</title>
 
-    <!-- css -->
+      <!-- css -->
 
-    <link rel="stylesheet" href="../sass/bootstrap-custom.css">
-    <link rel="stylesheet" href="../sass/main.css">
-</head>
+      <link rel="stylesheet" href="../sass/bootstrap-custom.css">
+      <link rel="stylesheet" href="../sass/main.css">
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg bg-primary">
-            <div class="container">
-                <a class="navbar-brand text-white" href="/">
-                    <img src="../images/logo.png" alt="logo" class="img-fluid header-logo">
-                    Satisface tu paladar
-                </a>
-
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+          <a class="navbar-brand text-white" href="/">
+            <img src="../images/logo.png" alt="logo" class="img-fluid header-logo">
+            Satisface tu paladar
+          </a>
+          <a class="navbar-brand text-white" href="carrito.html">
+            Cancelar
+          </a>
+        </div>
+      </nav>
     </header>
+
     <main class="doc-body">
-
-   
+      <section class="container-fluid my-2 p-3">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+            <div class="card m-2 p-3 custom-shadow">
+              <div class="card-title text-center">
+                <h1>Publique su receta</h1>
+              </div>
+              <form action="">
+                <div class="row">
+                  <!-- Imagen -->
+                  <div class="col-6 col-md-4 d-flex align-items-center mx-auto m-md-0">
+                    <div class="card d-flex align-items-center p-5 border-2 border-black rounded-5">
+                      <img class="w-100 card-img-bottom" src="../images/camara.jpeg" alt="">
+                    </div>
+                  </div>
+                  <!-- Form -->
+                  <div class="col-12 col-md-8">
+                    <div class="card-body">
+                      <!-- <div>
+                        <input type="file">
+                      </div> -->
+                      <div class="mb-3 d-flex flex-column align-items-center">
+                        <label for="nombreComida" class="form-label">Nombre de la comida</label>
+                        <input type="text" class="form-control border-primary" id="nombreComida">
+                      </div>
+                      <div class="mb-3 d-flex justify-content-between">
+                        <label for="precioComida" class="form-label m-auto">Precio</label>
+                        <input type="number" class="form-control w-75 border-primary" id="precioComida">
+                      </div>
+                      <div class="mb-3 d-flex flex-column align-items-center">
+                        <label for="cantComidaDispon" class="form-label">Cantidad disponible (opcional)</label>
+                        <input type="number" class="form-control border-primary" id="cantComidaDispon">
+                      </div>
+                      <div class="mb-1 d-flex flex-column align-items-center">
+                        <label for="horarioComida" class="form-label">Horario (opcional)</label>
+                        <input type="time" class="form-control border-primary" id="horarioComida">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mb-3">
+                    <label for="descripComida" class="form-label d-flex flex-column align-items-center">Descripción</label>
+                    <input type="text" class="form-control border-primary" id="descripComida">
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Publicar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- JS -->
+      <!-- JS -->
     <script src="../js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
