@@ -8,7 +8,7 @@
 }
 .button-capsule-white:hover {
   color: #fff;
-  background-color: #FF8533;
+  background-color: color("crusta");
   border: 1px solid #fff;
 }
 
@@ -3027,7 +3027,7 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
+  --bs-btn-color: #000;
   --bs-btn-bg: #ff6600;
   --bs-btn-border-color: #ff6600;
   --bs-btn-hover-color: #000;
