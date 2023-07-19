@@ -8,7 +8,7 @@
 }
 .button-capsule-white:hover {
   color: #fff;
-  background-color: #FF8533;
+  background-color: color("crusta");
   border: 1px solid #fff;
 }
 
