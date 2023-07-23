@@ -17,7 +17,7 @@
       <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container">
           <a class="navbar-brand text-white" href="/">
-            <img src="../images/logo.png" alt="logo" class="img-fluid header-logo">
+            <img src="../images/logo.png" alt="logo" id="img-Comida" class="img-fluid header-logo">
             Satisface tu paladar
           </a>
           <a class="navbar-brand text-white" href="carrito.html">
@@ -75,7 +75,14 @@
                     <textarea maxlength="200" class="form-control border-primary" id="descripComida" rows="5" ></textarea>
                   </div>
                   <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary">Publicar</button>
+                    <button type="submit" id="btnPublicComida" class="btn btn-primary">Publicar</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mb-3">
+                    <div class="resultado" id="resultado">
+
+                    </div>
                   </div>
                 </div>
               </form>
@@ -86,5 +93,7 @@
     </main>
       <!-- JS -->
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/agregar_producto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
