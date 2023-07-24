@@ -1,0 +1,12 @@
+{
+    "data":[
+        {
+            "id" : 1,
+            "nombreComida" : "Empanizado",
+            "precioComida" : 35,
+            "cantComida" : 10,
+            "horario" : "10:00",
+            "descripcion" : "*Disfruta de nuestro empanizado con spaguethi"
+        }
+    ]
+}

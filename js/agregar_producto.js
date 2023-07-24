@@ -1,21 +1,38 @@
-"use strict"
+"use strict";
+
+import { RecetaUsuario } from "./crud.js";
+import datosComida from '../data/dataFood.json' assert { type: "json" };
 
 const formNombComida = document.getElementById("nombreComida");
 const formPrecioComida = document.getElementById("precioComida");
 const formDescripComida = document.getElementById("descripComida");
-const btnPubComida = document.getElementById("btnPublicComida");
+const formComida = document.getElementById("formComida");
 const resultado = document.getElementById("resultado");
 
-btnPubComida.addEventListener("click", (e) => {
+formComida.addEventListener("submit", (e) => {
     e.preventDefault(); // previene que se recargue la pagina al darle al submit
 
     let error = validarCampos();
 
     if (error[0]) {
-        resultado.innerHTML = error[1];
+        Swal.fire({
+            title: 'Campos incorrectos',
+            text: error[1],
+            icon: 'warning',
+        })
     }
     else {
-        resultado.innerHTML = "Solicitud enviada correctamente";
+        Swal.fire({
+            title: 'Datos Correctos',
+            text: "Publicando su receta",
+            icon: 'success',
+        })
+
+        document.querySelector(".swal2-confirm").addEventListener("click",()=>{
+            agregarComida();
+            // formComida.submit();
+            console.log(datosComida);
+        });
     }
 });
 
@@ -44,3 +61,32 @@ const validarCampos = () => {
     error[0] = false;
     return error;
 }
+
+var numReceComidas = 1;
+
+//Crud
+const agregarComida = e=>{
+
+    numReceComidas++;
+    let id = numReceComidas;
+    let nombreComida = formNombComida.value;
+    let precioComida = formPrecioComida.value;
+    let cantComida = document.getElementById("cantComidaDispon").value;
+    let horario = document.getElementById("horarioComida").value;
+    let descripcion = formDescripComida.value;
+
+    datosComida.data.push(new RecetaUsuario(id, nombreComida, precioComida, cantComida, horario, descripcion));
+    
+    // document.querySelector("#formGift").reset();
+    // cargarTabla();
+}
+
+/*
+this.id = id;
+        this.nombreComida = nombreComida;
+        this.precioComida = precioComida;
+        this.cantComida = cantComida;
+        this.Horario = Horario;
+        this.descripcion = descripcion;
+
+*/
