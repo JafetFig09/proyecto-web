@@ -30,8 +30,8 @@ formComida.addEventListener("submit", (e) => {
 
         document.querySelector(".swal2-confirm").addEventListener("click",()=>{
             agregarComida();
+            formComida.reset();
             // formComida.submit();
-            console.log(datosComida);
         });
     }
 });
@@ -76,17 +76,9 @@ const agregarComida = e=>{
     let descripcion = formDescripComida.value;
 
     datosComida.data.push(new RecetaUsuario(id, nombreComida, precioComida, cantComida, horario, descripcion));
-    
-    // document.querySelector("#formGift").reset();
-    // cargarTabla();
+
+    let datos = datosComida.data[numReceComidas-1].id;
+    let valores = datosComida.data[numReceComidas-1];
+
+    localStorage.setItem(datos,JSON.stringify(valores));
 }
-
-/*
-this.id = id;
-        this.nombreComida = nombreComida;
-        this.precioComida = precioComida;
-        this.cantComida = cantComida;
-        this.Horario = Horario;
-        this.descripcion = descripcion;
-
-*/
