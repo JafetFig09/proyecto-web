@@ -1,6 +1,7 @@
 @import "main.scss";
 
 
+
 .img-size{
     width: 100%;
     height: rem(200);
@@ -17,3 +18,18 @@
     font-size: rem(3);
 }
 
+.fill-car{
+    position: relative;
+    &::after{
+        position: absolute;
+        display: block;
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: rgb(20, 20, 250);
+        border-radius: 100%;
+        top: 0;
+        right: 0;
+        transform: translateX(10px);
+    }
+}
