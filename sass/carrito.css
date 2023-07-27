@@ -48,4 +48,20 @@
 
 .titulo-carrito {
   font-size: 0.1875rem;
+}
+
+.fill-car {
+  position: relative;
+}
+.fill-car::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: rgb(20, 20, 250);
+  border-radius: 100%;
+  top: 0;
+  right: 0;
+  transform: translateX(10px);
 }/*# sourceMappingURL=carrito.css.map */
