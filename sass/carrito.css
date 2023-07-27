@@ -33,4 +33,19 @@
   .header .navbar .navbar-brand {
     font-size: 1.25rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+.img-size {
+  width: 100%;
+  height: 12.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.buscador {
+  border-radius: 0.5rem;
+  border: 2px solid #ff6600;
+}
+
+.titulo-carrito {
+  font-size: 0.1875rem;
+}/*# sourceMappingURL=carrito.css.map */

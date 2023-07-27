@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
+    <!-- css -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../sass/bootstrap-custom.css" />
+    <link rel="stylesheet" href="../sass/main.css" />
+    <link rel="stylesheet" href="../sass/registro.css" />
+    <link rel="stylesheet" href="../sass/login.css" />
+  </head>
 
- <!-- css -->
- <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
- <link rel="stylesheet" href="../sass/bootstrap-custom.css">
- <link rel="stylesheet" href="../sass/main.css">
- <link rel="stylesheet" href="../sass/registro.css">
- <link rel="stylesheet" href="../sass/login.css">
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+          <a class="navbar-brand text-white" href="/">
+            <img
+              src="../images/logo.png"
+              alt="logo"
+              class="img-fluid header-logo"
+            />
+            Satisface tu paladar
+          </a>
+        </div>
+      </nav>
+    </header>
 
-</head>
-
-<body>
-  <header class="header">
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <!-- codigo -->
+    <main class="doc-body">
       <div class="container">
+<<<<<<< HEAD
         <a class="navbar-brand text-white" href="/">
           <img src="../images/logo.png" alt="logo" class="img-fluid header-logo">
           Satisface tu paladar 
         </a>
+=======
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4 mt-5">
+            <form action="" id="form-registro" class="d-flex flex-column align-items-center justify-content-center">
+              <h3><b>Registro</b></h3>
+>>>>>>> e7be709ff625ee32029dbb70016999d91833ddbe
 
-        
+              <div class="row flex-column align-items-center m-3">
+                Nombre(s)<input type="text" class="box" />
+              </div>
+
+              <div class="row flex-column align-items-center m-3">
+                Apellido Paterno<input type="text" class="box" />
+              </div>
+
+              <div class="row flex-column align-items-center m-3">
+                Apellido Materno<input type="text" class="box" />
+              </div>
+
+              <div class="row flex-column align-items-center m-3">
+                Correo Electrónico<input type="text" class="box" />
+              </div>
+              <div class="row flex-column align-items-center m-3">
+                Contraseña<input type="text" class="box" />
+              </div>
+
+              <div class="row flex-column align-items-center m-3">
+                País/Estado/Ciudad<input type="text" class="box" />
+              </div>
+
+              <button id="button-main">Registrarte</button>
+            </form>
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
-
-  <!-- codigo -->
-  <main class="doc-body">
-    <div class="container">
-      <form action="" id="form-registro" class="text-center mx-auto m-5">
-        <h3><b>Registro</b></h3>
-        
-        <div class="row justify-content-center m-3" >
-          Nombre(s)<input type="text" class="box " >
-        </div>
-        
-        <div class="row justify-content-center m-3">
-          Apellido Paterno<input type="text" class="box">
-        </div>
-        
-        <div class="row justify-content-center m-3">
-          Apellido Materno<input type="text" class="box">
-        </div>
-        
-        <div class="row justify-content-center m-3"> 
-          Correo Electrónico<input type="text" class="box">
-        </div>
-        <div class="row justify-content-center m-3">
-          Contraseña<input type="text" class="box">
-        </div>
-  
-        <div class="row justify-content-center m-3">
-          País/Estado/Ciudad<input type="text" class="box">
-        </div>
-        
-        <button id="button-main">Registrarte</button>
-      </form>
-      
-    </div>
-    
-
-   
-  </main>
-  <!-- JS -->
-  <script src="../js/bootstrap.bundle.min.js"></script>
-
-</body>
-
+    </main>
+    <!-- JS -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

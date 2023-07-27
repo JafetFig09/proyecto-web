@@ -1,53 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito</title>
 
-    <!-- css -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../sass/bootstrap-custom.css">
-    <link rel="stylesheet" href="../sass/main.css">
-
+  <!-- css -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../sass/bootstrap-custom.css" />
+  <link rel="stylesheet" href="../sass/main.css" />
+  <link rel="stylesheet" href="../sass/carrito.css" />
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg bg-primary">
-            <div class="container">
-                <a class="navbar-brand text-white" href="/">
-                    <img src="../images/logo.png" alt="logo" class="img-fluid header-logo">
-                    Satisface tu paladar
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-white" href="/">
+          <img src="../images/logo.png" alt="logo" class="img-fluid header-logo" />
+          Satisface tu paladar
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+
+          <!--DROPDOWM CARRITO-->
+          <ul
+            class="navbar-nav d-flex w-100 justify-content-center justify-content-lg-end align-items-center mb-2 mb-lg-0">
+            <li class="nav-item">
+              <!-- <a class="btn" href="#">
+                  <i class="bx bxs-cart bx-md"></i>
+                  
+                </a> -->
+              <div class="dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bx bxs-cart bx-md"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul
-                        class="navbar-nav d-flex w-100 justify-content-center justify-content-lg-end align-items-center mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="btn" href="#">
-                                <i class='bx bxs-cart bx-md'></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn button-capsule-white" href="">Publicar comida</a>
-                        </li>
-                    </ul>
+                <ul class="dropdown-menu">
+                  <div id="carrito">
+                    <table id="lista-carrito" class="table">
+                      <thead>
+                        <tr>
+                          <th>Img</th>
+                          <th>Nombre</th>
+                          <th>Precio</th>
+                          <th>Cant</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
 
-                </div>
+                    <div class="d-flex justify-content-center">
+                      <a href="#" id="vaciar-carrito" class="btn w-75 border-dark">Vaciar Carrito</a>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="btn button-capsule-white" href="">Publicar comida</a>
+            </li>
+          </ul>
+          <!---CARRITO-->
+          <!-- <ul
+              class="navbar-nav d-flex w-100 justify-content-center justify-content-lg-end align-items-center mb-2 mb-lg-0"
+            >
+              <li class="nav-item">
+                <a class="btn" href="#">
+                  <i class="bx bxs-cart bx-md"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="btn button-capsule-white" href="">Publicar comida</a>
+              </li>
+            </ul> -->
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main class="doc-body">
+    <div class="container d-flex justify-content-center mt-2 mb-2">
+      <form action="">
+        <input type="search" class="w-100 custom-shadow buscador" placeholder="Busca tu comida aqui..">
+      </form>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4  col-md-8 my-2 ">
+          <div class="card">
+            <img src="../images/carrito/pizza.jpg" class="card-img-top img-size" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Pizza Hawaiana</h5>
+             <div class="d-flex justify-content-between">
+              <p class="card-text j">
+                Prueba la mejor pizza de todo Opichen 
+              </p>
+              <small>$300</small>
+             </div>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary w-75">Agregar al carrito</a>
+              </div>
             </div>
-        </nav>
-    </header>
-    <main class="doc-body">
+          </div>
+        </div>
+        <div class="col-lg-4  col-md-8 my-2 ">
+          <div class="card">
+            <img src="../images/carrito/Salbutes.jpg" class="card-img-top img-size" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Salbutes</h5>
+              <div class="d-flex justify-content-between">
+                <p class="card-text j">
+                  Salbutes de caldidad,origanales de Kanasin
+                </p>
+                <small>$12</small>
+               </div>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary w-75">Agregar al carrito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4  col-md-8 my-2">
+          <div class="card">
+            <img src="../images/carrito/Papadzules.jpg" class="card-img-top img-size" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Papadzules</h5>
+              <div class="d-flex justify-content-between">
+                <p class="card-text j">
+                  Papadzules origanarios de Hunucma 
+                </p>
+                <small>$50</small>
+               </div>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary w-75">Agregar al carrito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-    </main>
-    <!-- JS -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
+      <div class="row justify-content-center">
+        <div class="col-lg-4  col-md-8 my-2 ">
+          <div class="card">
+            <img src="../images/carrito/tortacochinita.jpg" class="card-img-top img-size" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Torta de Cochinita</h5>
+              <div class="d-flex justify-content-between">
+                <p class="card-text j">
+                  Cochinita de calidad 100% meridanas 
+                </p>
+                <small>$18</small>
+               </div>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary w-75">Agrgar al carrito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4  col-md-8 my-2 ">
+          <div class="card">
+            <img src="../images/carrito/sopa-de-lima.jpg" class="card-img-top img-size" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Sopa de lima</h5>
+              <div class="d-flex justify-content-between">
+                <p class="card-text j">
+                 ¿Quieres probar calidad?. La mejor sopa de lima 
+                </p>
+                <small>$50</small>
+               </div>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary w-75">Agregar al carrito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-8 my-2 ">
+          <div class="card">
+            <img src="../images/carrito/quesorelleno.jpg" class="card-img-top img-size" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Queso relleno</h5>
+              <div class="d-flex justify-content-between">
+                <p class="card-text ">
+                  El original queso relleno de todo Yucatan
+                </p>
+                <small>$250</small>
+               </div>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-primary w-75">Agregar al carrito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@ $colors :(
 
     &:hover {
         color: #fff;
-        background-color: map-get($colors, crusta);
+        background-color:color("crusta");
         border: 1px solid #fff;
     }
 }
@@ -62,6 +62,8 @@ $colors :(
         .navbar {
             .navbar-brand {
                 font-size: rem(20);
+
+                
             }
         }
     }
