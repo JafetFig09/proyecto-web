@@ -8,7 +8,7 @@ const api = () =>{
         let url = "https://www.themealdb.com/api/json/v1/1/random.php/images/media/meals/llcbn01574260722.jpg/preview"
         let precioAleatorio = Math.floor(Math.random() * 150);
 
-        let precio = (precioAleatorio === 0 ) ? 85 : precioAleatorio;
+        let precio = (precioAleatorio < 20 ) ? 85 : precioAleatorio;
 
         
         fetch(url)
