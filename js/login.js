@@ -13,6 +13,8 @@ document.getElementById('registroForm').addEventListener('submit', function(even
           )
         
         return;
+    }else{
+        window.location.href="carrito.html";
     }
 
 
