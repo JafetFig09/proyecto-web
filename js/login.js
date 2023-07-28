@@ -1,21 +1,59 @@
-document.getElementById('registroForm').addEventListener('submit', function(event)
-{
-    event.preventDefault();
-    let exampleInputEmail1=document.getElementById('exampleInputEmail1').value;
-    let exampleInputPassword1 = document.getElementById('exampleInputPassword1').value;
+import datos from "../data/dataUsers.json" assert {type: "json"};
 
-    if(!exampleInputEmail1 || !exampleInputPassword1)
-    {
-        Swal.fire(
-            'Por favor, rellene todos los campos',
-            'Presiona el boton OK',
-            'warning'
-          )
-        
+// Carga de DB
+window.addEventListener("load",e=>{
+    let database = localStorage.getItem("1");
+    database = JSON.parse(database);
+    database.forEach(usuario=>{
+        datos.data.push(usuario);
+    });
+
+    console.log(datos.data);
+});
+
+document.getElementById("form-inicio-sesion").addEventListener("submit",e=>{
+    e.preventDefault();
+
+    let formCorreo = document.getElementById("exampleInputEmail1").value.toLowerCase();
+    let formContraseña = document.getElementById("exampleInputPassword1").value;
+
+    let usuarioVerificado = comprobarUsuario(formCorreo,formContraseña);
+
+    if (usuarioVerificado[0]) {
+        localStorage.setItem("2" ,usuarioVerificado[1]);
+        window.location.href = "carrito.html";
+    }
+    else{
+        Swal.fire({
+            title: 'Campos incorrectos',
+            text: usuarioVerificado[1],
+            icon: 'error'
+        })
         return;
-    }else{
-        window.location.href="carrito.html";
+    }
+});
+
+const comprobarUsuario = (formCorreo, formContraseña)=>{
+    let error = [];
+    
+    for (const correo of datos.data) {
+        if (formCorreo === correo.corrElectr) {
+            if (formContraseña === correo.contraseña) {
+                error[0] = true;
+                error[1] = formCorreo;
+                return error;
+            } 
+            else {
+                error[0] = false;
+                error[1] = "La contraseña no coincide";
+                return error;
+            }
+        } 
+        else {
+            error[0] = false;
+            error[1] = "No existe una cuenta registrada con el correo";
+        }
     }
 
-
-})
+    return error;
+}
