@@ -37,9 +37,9 @@
                 </a> -->
               <div class="dropdown-center">
                 <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bx bxs-cart bx-md"></i>
+                  <i id="iconoCarrito" class="bx bxs-cart bx-md"></i>
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
                   <div id="carrito">
                     <table id="lista-carrito" class="table">
                       <thead>
@@ -85,14 +85,17 @@
 
 
   <main class="doc-body">
-    <div class="container d-flex justify-content-center mt-2 mb-2">
+    <div class="container d-flex justify-content-evenly    mt-2 mb-2">
       <form action="">
         <input type="search" class="w-100 custom-shadow buscador" placeholder="Busca tu comida aqui..">
       </form>
+
+      <button id="btnCargar" class="btn-outline-primary btn">Otros Platillos</button>
     </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-4  col-md-8 my-2 ">
+
+    <div id="lista-comida" class="container">
+      <div class="row justify-content-center contenedor-cartas">
+        <!-- <div class="col-lg-4  col-md-8 my-2 ">
           <div class="card">
             <img src="../images/carrito/pizza.jpg" class="card-img-top img-size" alt="..." />
             <div class="card-body">
@@ -108,8 +111,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4  col-md-8 my-2 ">
+        </div> -->
+
+       
+        <!-- <div class="col-lg-4  col-md-8 my-2 ">
           <div class="card">
             <img src="../images/carrito/Salbutes.jpg" class="card-img-top img-size" alt="..." />
             <div class="card-body">
@@ -125,8 +130,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4  col-md-8 my-2">
+        </div> -->
+        <!-- <div class="col-lg-4  col-md-8 my-2">
           <div class="card">
             <img src="../images/carrito/Papadzules.jpg" class="card-img-top img-size" alt="..." />
             <div class="card-body">
@@ -143,9 +148,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="row justify-content-center">
+      <!-- <div class="row justify-content-center">
         <div class="col-lg-4  col-md-8 my-2 ">
           <div class="card">
             <img src="../images/carrito/tortacochinita.jpg" class="card-img-top img-size" alt="..." />
@@ -197,11 +202,14 @@
             </div>
           </div>
         </div>
+      </div> -->
       </div>
     </div>
   </main>
   <!-- JS -->
   <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/consumo-api.js"></script>
+  <script src="../js/carrito.js"></script>
 </body>
 
 </html>
