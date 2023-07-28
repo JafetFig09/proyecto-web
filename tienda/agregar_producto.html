@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Agregar producto</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar producto</title>
 
-      <!-- css -->
-
-      <link rel="stylesheet" href="../sass/bootstrap-custom.css">
-      <link rel="stylesheet" href="../sass/main.css">
+    <!-- css -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../sass/bootstrap-custom.css" />
+    <link rel="stylesheet" href="../sass/main.css" />
   </head>
 
   <body>
@@ -17,12 +19,14 @@
       <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container">
           <a class="navbar-brand text-white" href="/">
-            <img src="../images/logo.png" alt="logo" class="img-fluid header-logo">
+            <img
+              src="../images/logo.png"
+              alt="logo"
+              class="img-fluid header-logo"
+            />
             Satisface tu paladar
           </a>
-          <a class="navbar-brand text-white" href="carrito.html">
-            Cancelar
-          </a>
+          <a class="navbar-brand text-white" href="carrito.html"> Cancelar </a>
         </div>
       </nav>
     </header>
@@ -35,47 +39,101 @@
               <div class="card-title text-center">
                 <h1>Publique su receta</h1>
               </div>
-              <form action="">
+              <form id="formAdd">
                 <div class="row">
                   <!-- Imagen -->
-                  <div class="col-6 col-md-4 d-flex align-items-center mx-auto m-md-0">
-                    <div class="card d-flex align-items-center p-5 border-2 border-black rounded-5">
-                      <img class="w-100 card-img-bottom" src="../images/camara.jpeg" alt="">
+                  <!-- <div
+                    class="col-6 col-md-4 d-flex align-items-center mx-auto m-md-0"
+                  >
+                    <div
+                      class="card d-flex align-items-center p-5 border-2 border-black rounded-5"
+                    >
+                      <img
+                        class="w-100 card-img-bottom"
+                        src="../images/camara.jpeg"
+                        alt=""
+                      />
                     </div>
-                  </div>
+                  </div> -->
                   <!-- Form -->
-                  <div class="col-12 col-md-8">
+                  <div class="col-12">
                     <div class="card-body">
                       <!-- <div>
                         <input type="file">
                       </div> -->
-                      <div class="mb-3 d-flex flex-column align-items-center">
-                        <label for="nombreComida" class="form-label">Nombre de la comida</label>
-                        <input type="text" class="form-control border-primary" id="nombreComida">
+                      <div class="mb-3 d-flex flex-column align-items-start">
+                        <label for="nombreComida" class="form-label"
+                          >Nombre de la comida</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control border-primary"
+                          id="nombreComida"
+                          required
+                        />
                       </div>
-                      <div class="mb-3 d-flex justify-content-between">
-                        <label for="precioComida" class="form-label m-auto">Precio</label>
-                        <input type="number" class="form-control w-75 border-primary" id="precioComida">
+                      <div class="mb-3 d-flex flex-column align-items-start">
+                        <label for="precioComida" class="form-label"
+                          >Precio</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control border-primary"
+                          id="precioComida"
+                          min="1"
+                          required
+                        />
                       </div>
-                      <div class="mb-3 d-flex flex-column align-items-center">
-                        <label for="cantComidaDispon" class="form-label">Cantidad disponible (opcional)</label>
-                        <input type="number" class="form-control border-primary" id="cantComidaDispon">
+                      <div class="mb-3 d-flex flex-column align-items-start">
+                        <label for="imagenComida" class="form-label"
+                          >Link imagen</label
+                        >
+                        <input
+                          type="url"
+                          class="form-control border-primary"
+                          id="imagenComida"
+                          
+                        />
                       </div>
-                      <div class="mb-1 d-flex flex-column align-items-center">
-                        <label for="horarioComida" class="form-label">Horario (opcional)</label>
-                        <input type="time" class="form-control border-primary" id="horarioComida">
+                      <div class="mb-3 d-flex flex-column align-items-start">
+                        <label for="cantComidaDispon" class="form-label"
+                          >Cantidad disponible</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control border-primary"
+                          id="cantComidaDispon"
+                          min="1"
+                          required
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="mb-3">
-                    <label for="descripComida" class="form-label d-flex flex-column align-items-center">Descripción</label>
+                    <label
+                      for="descripComida"
+                      class="form-label d-flex flex-column align-items-start"
+                      >Descripción</label
+                    >
                     <!-- <input type="text" class="form-control border-primary" id="descripComida"> -->
-                    <textarea maxlength="200" class="form-control border-primary" id="descripComida" rows="5" ></textarea>
+                    <textarea
+                      maxlength="200"
+                      class="form-control border-primary"
+                      id="descripComida"
+                      rows="5"
+                      required
+                    ></textarea>
                   </div>
                   <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary">Publicar</button>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      id="guardarDatos"
+                    >
+                      Publicar
+                    </button>
                   </div>
                 </div>
               </form>
@@ -83,8 +141,134 @@
           </div>
         </div>
       </section>
+
+      <section class="tabla-productos">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+              <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Imagen</th>
+                      <th scope="col">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="datos-tabla"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Editar producto
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="formEdit">
+                <input type="text" id="editIndex" hidden />
+
+                <div class="mb-3 d-flex flex-column align-items-start ">
+                  <label for="editNombreComida" class="form-label"
+                    >Nombre de la comida</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control border-primary"
+                    id="editNombreComida"
+                    required
+                  />
+                </div>
+                <div class="mb-3 d-flex flex-column  align-items-start">
+                  <label for="editPrecioComida" class="form-label"
+                    >Precio</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control border-primary"
+                    id="editPrecioComida"
+                    min="1"
+                    required
+                  />
+                </div>
+                <div class="mb-3 d-flex flex-column align-items-start">
+                  <label for="editCantComidaDispon" class="form-label"
+                    >Cantidad disponible</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control border-primary"
+                    id="editCantComidaDispon"
+                    min="1"
+                    required
+                  />
+                </div>
+                <div class="mb-3 d-flex flex-column align-items-start">
+                  <label for="editImagenComida" class="form-label"
+                    >Link imagen</label
+                  >
+                  <input
+                    type="url"
+                    class="form-control border-primary"
+                    id="editImagenComida"
+                    
+                  />
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="editDescripComida"
+                    class="form-label d-flex flex-column align-items-start "
+                    >Descripción</label
+                  >
+                  <!-- <input type="text" class="form-control border-primary" id="descripComida"> -->
+                  <textarea
+                    maxlength="200"
+                    class="form-control border-primary"
+                    id="editDescripComida"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="EditGuardarDatos"
+                    data-bs-dismiss="modal"
+                  >
+                    Guardar cambios
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-      <!-- JS -->
+    <!-- JS -->
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/agregar-comida.js"></script>
   </body>
 </html>
