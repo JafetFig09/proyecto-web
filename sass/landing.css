@@ -6,13 +6,13 @@ body {
 }
 
 #title {
-  color: #FF6600;
-  font-size: 58px;
+  color: #ff6600;
+  font-size: 20px;
   font-weight: bold;
 }
 
 #first {
-  font-size: 25px;
+  font-size: 16px;
 }
 
 #imagen-nav {
@@ -29,7 +29,7 @@ body {
 
 #button-main {
   align-items: center;
-  background-color: #FF6600;
+  background-color: #ff6600;
   border-radius: 12px;
   box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ body {
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
-  font-size: 1.2rem;
+  font-size: 14px;
   font-weight: 700;
   justify-content: center;
   line-height: 1;
@@ -62,7 +62,15 @@ body {
 
 #button-main:hover {
   background-color: rgb(255, 255, 255);
-  color: #FF6600;
+  color: #ff6600;
+}
+
+.custom-navbar {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+
+.custom-container {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
 
 .custom-navbar .dropdown-menu .dropdown-item:active {
@@ -87,7 +95,7 @@ body {
 .bottom {
   color: rgb(255, 255, 255);
   margin: auto;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .images {
@@ -119,4 +127,19 @@ body {
 
 #contactar {
   font-size: 30px;
+}
+
+@media (min-width: 992px) {
+  #title {
+    font-size: 58px;
+  }
+  #first {
+    font-size: 25px;
+  }
+  #button-main {
+    font-size: 1.2rem;
+  }
+  .bottom {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=landing.css.map */

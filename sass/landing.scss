@@ -6,32 +6,29 @@ body {
 }
 
 #title {
-  color: #FF6600;
-  font-size: 58px;
-  
+  color: #ff6600;
+  font-size: 20px;
+
   font-weight: bold;
 }
 #first {
-  font-size: 25px;
+  font-size: 16px;
 }
-#imagen-nav
-{
+#imagen-nav {
   width: 150px;
   height: 150px;
 }
 
-
-#img-principal
-{
+#img-principal {
   margin-top: 20px;
-  width: 400px; 
+  width: 400px;
   filter: blur(0.5px);
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
 }
 
 #button-main {
   align-items: center;
-  background-color: #FF6600;
+  background-color: #ff6600;
   border-radius: 12px;
   box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
@@ -39,7 +36,8 @@ body {
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
-  font-size: 1.2rem;
+  font-size: 14px;
+
   font-weight: 700;
   justify-content: center;
   line-height: 1;
@@ -52,7 +50,7 @@ body {
   white-space: nowrap;
   border: 0;
   -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
@@ -64,10 +62,14 @@ body {
 
 #button-main:hover {
   background-color: rgb(255, 255, 255);
-  color: #FF6600;
-  
+  color: #ff6600;
 }
-
+.custom-navbar {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+.custom-container {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
 .custom-navbar .dropdown-menu .dropdown-item:active {
   background-color: orange;
 }
@@ -82,49 +84,54 @@ body {
   font-size: 30px;
 }
 
-.footer-second 
-{
-  margin-top: 20px; 
+.footer-second {
+  margin-top: 20px;
 }
 
-.bottom 
-{
+.bottom {
   color: rgb(255, 255, 255);
   margin: auto;
-  font-size: 20px;  
+  font-size: 16px;
+  // font-size: 20px;
 }
 
-.images 
-{
+.images {
   margin-bottom: 50px;
 }
 .carousel-control-prev-icon,
-.carousel-control-next-icon 
-{
-    filter: invert(100%);
+.carousel-control-next-icon {
+  filter: invert(100%);
 }
 
-.carousel-item img
-{
-    margin: 0 auto;
+.carousel-item img {
+  margin: 0 auto;
 }
-#logo-second
-{
+#logo-second {
   width: 100px;
   height: 100px;
-
 }
-#second-div
-{
- margin-left: auto;
+#second-div {
+  margin-left: auto;
 }
-.social-media
-{
+.social-media {
   height: 60px;
   width: 60px;
 }
-#contactar
-{
+#contactar {
   font-size: 30px;
 }
 
+@media (min-width: 992px) {
+  #title {
+    font-size: 58px;
+  }
+  #first {
+    font-size: 25px;
+  }
+  #button-main {
+    font-size: 1.2rem;
+  }
+  .bottom {
+    font-size: 20px;
+  }
+}
