@@ -2,30 +2,13 @@
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
-<<<<<<< HEAD
-  width: 400px;
-  margin: auto;
-  margin-top: 20px;
-  text-align: center;
-}
-
-h3 {
-  font-weight: bolder;
-}
-
-=======
   background-color: white;
 }
 
->>>>>>> e7be709ff625ee32029dbb70016999d91833ddbe
 .box {
-  border: 1px solid;
+  border: 1px solid #ff6600;
   border-radius: 5px;
   width: 300px;
-<<<<<<< HEAD
-  padding: 5px;
-  text-align: center;
-=======
 } 
 .doc-body p {
   margin-bottom: 2px;
@@ -68,5 +51,4 @@ h3 {
   background-color: white;
   color: #ff6600;
   border: 2px solid black;
->>>>>>> e7be709ff625ee32029dbb70016999d91833ddbe
 }/*# sourceMappingURL=registro.css.map */
