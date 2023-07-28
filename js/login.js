@@ -6,7 +6,12 @@ document.getElementById('registroForm').addEventListener('submit', function(even
 
     if(!exampleInputEmail1 || !exampleInputPassword1)
     {
-        alert('Por favor, rellene todos los campos');
+        Swal.fire(
+            'Por favor, rellene todos los campos',
+            'Presiona el boton OK',
+            'warning'
+          )
+        
         return;
     }
 
