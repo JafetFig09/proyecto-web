@@ -5,12 +5,6 @@
   border: 1px solid #000;
   border-radius: 1.25rem;
 }
-
-#descripComida {
-  resize: none;
-  overflow-y: auto;
-}
-
 .button-capsule-white:hover {
   color: #fff;
   background-color: color("crusta");

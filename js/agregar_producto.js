@@ -66,8 +66,8 @@ var numReceComidas = 1;
 
 //Crud
 const agregarComida = e=>{
-
     numReceComidas++;
+    
     let id = numReceComidas;
     let nombreComida = formNombComida.value;
     let precioComida = formPrecioComida.value;
