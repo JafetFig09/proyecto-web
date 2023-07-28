@@ -7,7 +7,7 @@
     <title>Login</title>
 
     <!-- css -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../sass/bootstrap-custom.css">
     <link rel="stylesheet" href="../sass/main.css">
     <link rel="stylesheet" href="../sass/login.css">
@@ -40,7 +40,7 @@
                     <div class="card py-4 px-lg-2 custom-shadow">
                         <div class="card-body ">
                             <h5 class="card-title text-center mb-4 h3">Iniciar Sesión</h5>
-                            <form>
+                            <form id="form-inicio-sesion">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Correo</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1"
@@ -70,8 +70,8 @@
     </main>
     <!-- JS -->
     <script src="../js/bootstrap.bundle.min.js"></script>
-
-
+    <script type="module" src="../js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

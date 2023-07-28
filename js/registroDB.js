@@ -7,10 +7,10 @@ window.addEventListener("load",e=>{
     let database = localStorage.getItem("1");
     database = JSON.parse(database);
     database.forEach(usuario=>{
-        datos.data.push(usuario)
+        datos.data.push(usuario);
     });
 
-    console.log(datos.data)
+    console.log(datos.data);
 });
 
 document.getElementById("form-registro").addEventListener("submit", function(event)
