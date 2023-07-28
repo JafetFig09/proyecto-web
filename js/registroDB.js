@@ -54,8 +54,9 @@ document.getElementById("form-registro").addEventListener("submit", function(eve
             agregarUsuario(formNombre,formApellPat,formApellMat,formCorreo,formContraseña,formCiudad);
             console.log(datos.data)
             this.reset();
+            window.location.href = "login.html";
             // formComida.submit();
-        }); 
+        });
     }
 });
 

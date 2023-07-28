@@ -20,6 +20,7 @@ document.getElementById("form-inicio-sesion").addEventListener("submit",e=>{
     let usuarioVerificado = comprobarUsuario(formCorreo,formContraseña);
 
     if (usuarioVerificado[0]) {
+        localStorage.setItem("2" ,usuarioVerificado[1]);
         window.location.href = "carrito.html";
     }
     else{
@@ -39,6 +40,7 @@ const comprobarUsuario = (formCorreo, formContraseña)=>{
         if (formCorreo === correo.corrElectr) {
             if (formContraseña === correo.contraseña) {
                 error[0] = true;
+                error[1] = formCorreo;
                 return error;
             } 
             else {

@@ -31,7 +31,6 @@ formComida.addEventListener("submit", (e) => {
         document.querySelector(".swal2-confirm").addEventListener("click",()=>{
             agregarComida();
             formComida.reset();
-            // formComida.submit();
         });
     }
 });

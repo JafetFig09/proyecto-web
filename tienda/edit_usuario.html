@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <!-- css -->
+    <title>editarCuenta</title>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../sass/bootstrap-custom.css">
     <link rel="stylesheet" href="../sass/main.css">
     <link rel="stylesheet" href="../sass/login.css">
-
-
 </head>
-
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg bg-primary">
@@ -39,25 +33,24 @@
 
                     <div class="card py-4 px-lg-2 custom-shadow">
                         <div class="card-body ">
-                            <h5 class="card-title text-center mb-4 h3">Iniciar Sesión</h5>
+                            <h5 class="card-title text-center mb-4 h3">Modificar cuenta</h5>
                             <form id="form-inicio-sesion">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Correo</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" required>
+                                        aria-describedby="emailHelp" readonly>
 
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                    <label for="exampleInputPassword1" class="form-label">Nueva Contraseña</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1" required>
                                 </div>
                                 <div class="d-flex justify-content-center mt-4 gap-4">
 
                                     <div class="d-flex flex-column  align-items-center">
-                                        <small>¿No Tienes cuenta?</small>
-                                        <a href="registro.html">Registrate</a>
+                                        <a id="btn-eliminar-cuenta" href="">Eliminar cuenta</a>
                                     </div>
-                                    <button type="submit" class="btn btn-primary text-white">Iniciar</button>
+                                    <button type="submit" class="btn btn-primary text-white">Guardar</button>
                                 </div>
                             </form>
                         </div>
@@ -68,10 +61,8 @@
 
         </div>
     </main>
-    <!-- JS -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="../js/login.js"></script>
+
+    <script type="module" src="../js/edit_usuario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-
 </html>
